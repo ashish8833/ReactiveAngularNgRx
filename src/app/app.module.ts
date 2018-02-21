@@ -16,6 +16,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+//NgRx Module
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { reducers, effects } from './store';
+import { service } from './service';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools'; // Store Dev Tools
+
 
 import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
@@ -46,9 +53,18 @@ import { RoutingModule } from './routing/routing.module';
     MatListModule, 
     MatSidenavModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+
+    //Store Module
+    StoreModule.forRoot({}),
+    StoreModule.forFeature('Products',reducers),
+    EffectsModule.forRoot([]),
+    EffectsModule.forFeature(effects),
+    StoreDevtoolsModule.instrument({
+      maxAge: 5
+    })
   ],
-  providers: [],
+  providers: [service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
