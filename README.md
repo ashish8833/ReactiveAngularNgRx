@@ -1,6 +1,11 @@
-# Intital Setup
-- Install `@nagular/material`, `@ngrx/core`, `@ngrx/store`, `@ngrx/effects`, `@ngrx/store-devtools`.
-- Setup routes for book listing and details
-- Create model for Book and Chapter in model folder
-- For NgRx create file structure.
+# Create Actions For Store
+##### Every Actions are unique type
+##### Each Actions has own state with it's data or payload
+- For Book Actions four actions.
+        - Load Book
+        - Load Book Success
+        - Load Book Fail
+        - Search Book
+
+
 
