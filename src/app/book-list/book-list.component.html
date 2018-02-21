@@ -1,0 +1,15 @@
+
+<ng-template *ngIf="loadSuccessfully$ | async" ngFor let-book [ngForOf]="books$ | async">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{book.sBookName}}</mat-card-title>
+          <mat-card-subtitle>{{book.sBookAuthor}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{book.sImage}}" alt="Image of book">
+        <mat-card-content>
+          <p>
+            {{book.sDescription}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+</ng-template>

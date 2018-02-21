@@ -1,0 +1,12 @@
+<mat-progress-bar *ngIf="loading$ | async" mode="indeterminate"></mat-progress-bar>
+<mat-toolbar color="primary" role="header">
+    <img src="https://avatars0.githubusercontent.com/u/139426?s=50&v=4">
+    <span>Reactive Angular With NgRx</span>
+    <img src="https://avatars0.githubusercontent.com/u/16272733?s=50&v=4">
+</mat-toolbar>
+<mat-card>
+    <mat-form-field color='primary'>
+        <input matInput placeholder="Search Google Book" [formControl]="searchControl">
+    </mat-form-field>
+</mat-card>
+<router-outlet></router-outlet> 
